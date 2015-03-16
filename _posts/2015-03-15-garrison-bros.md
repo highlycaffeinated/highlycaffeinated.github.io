@@ -1,5 +1,5 @@
 ---
-title: ""
+title: Garrison Brothers Distillery
 published: true
 ---
 
