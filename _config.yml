@@ -1,5 +1,6 @@
 # Build settings
 highlighter: rouge
+gems: [jekyll-paginate]
 
 # Site settings
 title: "highlycaffeinated"
