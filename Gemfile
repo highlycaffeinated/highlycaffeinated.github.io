@@ -1,5 +1,5 @@
-source 'https://rubygems.org' do
-  gem 'github-pages'
-  gem 'nokogiri', '=1.6.8'
-  gem 'jekyll-compose', group: [:jekyll_plugins]
-end
+source 'https://rubygems.org'
+gem 'jekyll'
+gem 'jekyll-archives'
+gem 'jekyll-sitemap'
+gem 'jekyll-paginate'
