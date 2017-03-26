@@ -11,14 +11,17 @@ widget1:
   title: "Blog"
   url: '/blog/'
   image: widget-1-302x182.jpg
+  text: "Wherein you'll find my writings, such as ride reports, gear reviews, and random thoughts about whatever's front of mind." 
 widget2:
   title: "Photos"
   url: '/photos/'
   image: widget-1-302x182.jpg
+  text: "Some of my pictures and links back to the primary sources."
 widget3:
   title: "Musings"
   url: '/musings/'
   image: widget-github-303x182.jpg
+  text: "Links, quotes, and other shorter form items that have caught my attention."
 #
 # Use the call for action to show a button on the frontpage
 #

@@ -65,7 +65,11 @@ format: frontpage
             {% for post in site.posts limit:1 %}
             {% if post.image.homepage %}
             <p>
+            	{% if post.image.homepage contains 'http' %}
+                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title | escape_once }}"><img width="970" src="{{ post.image.homepage }}" alt="{{ page.title | escape_once }}"></a>
+				{% else %}
                 <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title | escape_once }}"><img width="970" src="{{ site.urlimg }}{{ post.image.homepage }}" alt="{{ page.title | escape_once }}"></a>
+				{% endif %}
             </p>
 
             {% if post.image.caption_url and post.image.caption %}
