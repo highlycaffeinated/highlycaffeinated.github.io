@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Regional Water Data
-published: true
+main_nav: false
 ---
 
 [![](http://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=08178700&parm_cd=00060&period=30)](http://waterdata.usgs.gov/tx/nwis/uv/?site_no=08178700&PARAmeter_cd=00065,00060)

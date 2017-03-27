@@ -1,5 +1,5 @@
 ---
-tags: project365 industrial shadows mechanical vintage piping hotelemma sternewirth
+#tags: project365 industrial shadows mechanical vintage piping hotelemma sternewirth
 ---
 
 [![][pod]][1]

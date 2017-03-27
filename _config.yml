@@ -24,6 +24,13 @@ url: "http://highlycaffeinated.com" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "post"
+      author: "david"
+
 # Build settings
 markdown: kramdown
 paginate: 5
