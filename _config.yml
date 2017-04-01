@@ -112,6 +112,7 @@ defaults:
       # sidebar:    		# Possible values › left, right › by default there will be no sidebar
       comments: false
       author: david     # Default author for pages
+      layout: page
   -
     scope:
       path: ''
@@ -121,6 +122,7 @@ defaults:
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
       author: david     # Default author for posts
+      layout: default
 
 
 
