@@ -34,7 +34,7 @@ layout: default
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+              <h2 class="post-title" itemprop="name"><a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}" itemprop="url">{{ post.title }}</a>{% if post.link %}<span class="link-arrow"> &#187;</span>{% endif %}</h2>
               <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
             </header>
             <div class="post-meta">
