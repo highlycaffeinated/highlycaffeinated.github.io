@@ -2,6 +2,7 @@
 layout: default
 title: About
 published: true
+main_nav: true
 ---
 
 #David Dobbins
