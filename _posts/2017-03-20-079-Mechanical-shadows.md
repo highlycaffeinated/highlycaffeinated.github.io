@@ -1,5 +1,6 @@
 ---
 tags: project365 industrial shadows mechanical vintage piping hotelemma sternewirth
+category: photos
 ---
 
 [![][pod]][1]

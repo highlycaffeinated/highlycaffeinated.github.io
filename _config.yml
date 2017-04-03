@@ -1,60 +1,91 @@
-# Build settings
+# Jekyll configuration
+#markdown: redcarpet
+#highlighter: pygments
+markdown: kramdown
 highlighter: rouge
-gems: [jekyll-paginate]
-
-# Site settings
-title: "highlycaffeinated"
-description: > # this means to ignore newlines until "email:"
-   a timeline of caffeine-addled decisions
-
-email: david@highlycaffeinated.com
-#blog logo
-#logo: "/assets/images/df_logo.jpg"
-# blog cover
-cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
-
-name: 'David Dobbins'
-author: 'David Dobbins'
-author_image: "/assets/images/author.png"
-
-paginate:	5
-
-url: "http://highlycaffeinated.com" # the base hostname & protocol for your site
-baseurl: ""
+paginate: 5
+language: 'en-us'
 
 defaults:
   - scope:
-      path: ""
+        path: ""
     values:
-      layout: "post"
-      author: "David Dobbins"
+        layout: "post"
+        navigation: True
+        cover: 'assets/images/cover_road.jpg'
 
-# social icons and sharing options
-social:
-  - icon:	twitter
-    url:	https://twitter.com/caffiend
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
+# Website info
+name: 'highlycaffeinated'
+description: "-- a timeline of caffeine addled decisions --"
 
-#  - icon:	facebook
-#    url:	https://facebook.com/???
-#    desc: Connect with me facebook
-#    share_url: //www.facebook.com/sharer.php
-#    share_title: ?t=
-#    share_link: "&amp;u="
+# Author's info
+author: 'David Dobbins'
+# edit 'categories' in the front matter of every post to match this username
+nickname: david
+bio: 'Full time software developer, (very) part time adventure cyclist, hobbyist photographer and craft beer enthusiast'
+location: 'Texas, USA'
+url: 'http://highlycaffeinated.com/'
+image: 'assets/images/caff-icon-circle.png'
 
-  - icon:	github
-    url:	https://github.com/highlycaffeinated
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
+short_url: 'highlycaffeinated.com'
+google_analytics: UA-24584645-1
+#disqus: username
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /
 
-#  - icon:	google-plus
-#    url:	https://google.com/???
-#    desc:	Add me on google+
-#    share_url:
-#    share_title:
-#    share_link:
+# Permalinks
+permalink: /:title
+# permalink: /author/:username
+# permalink: /tag/:tag
+
+
+# gems and other configs
+gems: [jekyll-paginate]
+exclude: [vendor]
+
+#jekyll-archives:
+#  enabled: [month, tags, categories]
+#  layout: 'archive'
+#  permalinks:
+#    month: '/:year/:month/'
+#    tag: '/tag/:name/'
+#    category: '/category/:name/'
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+#safe: false
+#lsi: false
+#username: highlycaffeinated
+#repo: jasper
+#branch: master
+#relative_source: ../jasper/
+#destination: ../jasper-pages/
+#production_url:  https://biomadeira.github.io/jasper/
+#source_url:      https://github.com/biomadeira/jasper/
+#
+#exclude:
+#  - README.md
+#  - Rakefile
+#  - Gemfile
+#  - Gemfile.lock
+#  - changelog.md
+#  - "*.Rmd"
+#  - vendor
+#  - .travis.yml
