@@ -968,6 +968,17 @@ body:not(.post-template) .post-title {
     color: #9EABB3;
 }
 
+.link-arrow img {
+	height: 16px;
+	width: 16px;
+	opacity: 0.5;
+	padding-bottom: 4px;
+}
+
+a:hover .link-arrow img {
+	opacity: 0.85;
+}
+
 .author-thumb {
     width: 24px;
     height: 24px;
