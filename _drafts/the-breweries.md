@@ -1,5 +1,6 @@
 ---
-title: Breweries of the GDMBR
+title: GDMBR - The Breweries
+category: biking
 ---
 
 What's the perfect reward for a long, tiring day in the saddle? Why a delicious hand-crafted ale, of course! It's a long ride and I'll certainly be needing refreshments along the way. The question is: where to find them. Where are the micro-breweries along the route? Surely someone has already made a handy list.
