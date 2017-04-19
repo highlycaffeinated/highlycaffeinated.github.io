@@ -1,5 +1,6 @@
 ---
-title: GDMBR - The Breweries
+title: Breweries on the GDMBR
+cover: assets/images/cover_brewery.jpg
 category: biking
 ---
 
