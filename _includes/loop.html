@@ -17,10 +17,10 @@
     {% for post in paginator.posts %}
     <article class="post">
         <header class="post-header">
-            <h2 class="post-title"><a href="{% if post.link %}{{ post.link }}{% else %}{{ site.baseurl }}{{ post.url | remove: '/' }}{% endif %}">{{ post.title }}{% if post.link %}<span class="link-arrow"> <img src="assets/images/icon-link.png"></span>{% endif %}</a></h2>
+			{% include loop_{{ post.layout }}_head.html %}
         </header>
         <section class="post-excerpt">
-            <p>{{ post.excerpt | strip_html | truncatewords: 26 }} <a class="read-more" href="{{ site.baseurl }}{{ post.url | remove: '/' }}">{% if post.link == nil %}&raquo;{% endif %}</a></p>
+			{% include loop_{{ post.layout }}_excerpt.html %}
         </section>
         <footer class="post-meta">
             {% if site.image %}<img class="author-thumb" src="{{ site.baseurl }}{{ site.image }}" alt="Author image" nopin="nopin" />{% endif %}
