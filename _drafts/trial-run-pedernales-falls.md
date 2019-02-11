@@ -1,5 +1,5 @@
 ---
-title: Trial Run: Pedernales Falls
+title: "Trial Run: Pedernales Falls"
 ---
 
 ===== Day 1 =====
