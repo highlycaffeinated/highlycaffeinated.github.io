@@ -1,33 +1,31 @@
 language: ruby
 rvm:
-  - 2.4.1
-
-cache: bundler # caching bundler gem packages will speed up build
-
+- 2.4.1
+cache: bundler
 before_install: gem install bundler && bundle install
-
 install: gem install jekyll -v 3.8.5 && gem install s3_website
-
 script: bundle exec jekyll build --drafts
-
-# branch whitelist, only for GitHub Pages
 branches:
   only:
-  - preview      # test the preview branch
-#  - gh-pages     # test the gh-pages branch
-#  - /pages-(.*)/ # test every branch which starts with "pages-"
-
+  - preview
+deploy:
+  provider: s3
+  access_key_id:
+    secure: Lx2k4X6ARCzFMHdB3qVbxURGPYBLaba3WzpKEjD8mDInT6SriOYEbz1QYkzX5+g8vvIAvBgE/VhvuSJOmtZQYxFm3WalId6MKdN1bsJpDxuGIzXuymbQ5SDoywhPSNtHa7OdS4JPmhVC0Uo/+M5kFELjfyvIJx6uoDdphnXUpJZAesRCD0uTpAEPYRIU4IxW9C9ooN52RZlgvyxg1YXTi74BbxF1InqJJ0RrXIyb5+1S/B45FASLo3yo4z6R+ZqRXp41hkTsj9C/RW/k7qwGbWstKFDMRN2Uf3iluU9NWI4LYJsgG483QKRIJXkgRdHr6dWgE1Au09YYGc+ypdqFzPgE34qsVy7MkQrYAzkyqf9uxMOPs+xP42SGaF41Ohh+7B3hBPFOVcTeb1r3DWdp2cMiJiv+WwQpgteOyZZqG7NTd4nJyMH3KQvH6uw/EKNsQuq5ZcuE9DXNDQet0UyvQkJ4mdB/7a5rHXsSsxQruxZk4QB49LlltTK00WT1hhTIYuuI3TZkf8QaqIvFBuK71kTgGggee8Cx0FrrIaXTEzBMETCUobKB/rGtImBU56Cn5kgKGC8CIuMD6J3n/S+/asR3NBtJamy6BppgVed12kVn3lVpzlr+1uEWzKzlKt+DTsawmc1PjO7fFPXDXP1czRwmKILQMJrUJqLRTFcB8zw=
+  secret_access_key:
+    secure: apJ40eJ61kxkH2fXxTnmC2fpOIJdykI5BQUjB6dyXgaicG3ceaU7XELBMUGq7M+1jclRjNqdLhZIQd3aO0ve9fGL1sm9zfTJGTC86RvDKZgBAoePucPaIgB36ugCrMsTzVFlCNWLHk07fAXOeb8TcxltWFGAGOSh5y0d48QvyvlQavoQm0XtdsQgjkeAHVPG718H4Pu7UbvGzZxRLjzb6gpi/+0BhMxJul2V7Ytc/ybsRr9VgDC7QNKc1y1ijQiRgaaocBLeYhYttGvCzjZiZHOrBYuQ2cJu9Le0pjRdAn/v//fHpky2G9/NepyH9kz2r/R+QBBq9H0pR4PihVZfHo3hO7L9NV28xDvfZOnaLkmVWmlUY9oNN+Mlv3iiCzPdXsLaLgmjS9m9n3tY7hx7KdV/sI+ma5dykhpAEHcqf7a3cJfL/vcVJv5LukafRJxSZwlC9njnnafGEZSQ2EzemCqzixe5KKRFdoS+6ztS5naNlt68BtWgDttr7BvNjkD5qTZ7x29TfzR7ypQTcRWws06fMwZdNt4Q4N/T8ZHojLG+Fc6ZEwPBteVBltGJ2sxz6SFczHwIGyk/TjT5KWCsa2UiaiW0H0bEWF7wtuNDocp1uGC8VjKmtLoF2qL5VdY9Kp52R8OtoSyJX6uAzKA4Sq3fIatQ2SBcKMIFVztHbbg=
+  bucket: preview.highlycaffeinated.com
+  local_dir: _site
+  skip_cleanup: true
+  on:
+    branch: preview
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 addons:
   apt:
     packages:
     - libcurl4-openssl-dev
-
-sudo: false # route your build to the container-based infrastructure for a faster build
-
-# Optional: disable email notifications about the outcome of your builds
+sudo: false
 notifications:
   email: false
