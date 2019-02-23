@@ -28,4 +28,6 @@ addons:
     - libcurl4-openssl-dev
 sudo: false
 notifications:
-  email: false
+  email: 
+    on_success: always
+    on_failure: always
