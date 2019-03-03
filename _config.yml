@@ -39,7 +39,8 @@ permalink: /:year/:month/:title/
 # permalink: /author/:username
 # permalink: /tag/:tag
 
-
+photos:
+  base_folder: /assets/photos
 # gems and other configs
 gems: [jekyll-paginate]
 exclude: [vendor]
