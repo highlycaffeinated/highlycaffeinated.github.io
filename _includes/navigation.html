@@ -5,15 +5,15 @@
     </a>
     <ul>
         <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">Home</a></li>
-        <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li>
+        <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/about">About</a></li>
 		{% for cats in site.categories %}
            {% assign cat = cats.first %}
-           <li class="nav-home {% if page.category == cat %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}{{ cat }}">{{ cat | capitalize }}</a></li>
+           <li class="nav-home {% if page.category == cat %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/{{ cat }}">{{ cat | capitalize }}</a></li>
 		{% endfor %}
 		{% comment %}
-        <li class="nav-author {% if page.current == 'author' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/david.html">Author</a></li>
+        <li class="nav-author {% if page.current == 'author' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/author/david.html">Author</a></li>
 		{% endcomment %}
     </ul>
-    <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="{{ site.baseurl }}/feed.xml">Subscribe</a>
 </div>
 <span class="nav-cover"></span>
