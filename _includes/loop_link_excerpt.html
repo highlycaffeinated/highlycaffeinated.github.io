@@ -1,1 +1,3 @@
-<p>{{ post.excerpt | strip_html | truncatewords: 26 }} <a class="read-more" href="{{ site.baseurl }}{{ post.url | remove: '/' }}">{% if post.link == nil %}&raquo;{% endif %}</a></p>
+<p>{{ post.excerpt | strip_html }}</p>
+{% if post.who != nil %}<p class="who">--{{ post.who }}</p>{% endif %}</p>
+<p><a class="read-more" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}/assets/images/icon-link.png"></a></p>

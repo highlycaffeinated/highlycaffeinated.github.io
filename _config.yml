@@ -12,7 +12,7 @@ defaults:
     values:
         layout: "post"
         navigation: True
-        cover: 'assets/images/cover_road.jpg'
+        cover: '/assets/images/cover_road.jpg'
 
 # Website info
 name: 'highlycaffeinated'
@@ -25,16 +25,17 @@ nickname: david
 bio: 'Full time software developer, (very) part time adventure cyclist, hobbyist photographer and craft beer enthusiast'
 location: 'Texas, USA'
 url: 'http://highlycaffeinated.com/'
-image: 'assets/images/caff-icon-circle.png'
+image: '/assets/images/caff-icon-circle.png'
 
 short_url: 'highlycaffeinated.com'
 google_analytics: UA-24584645-1
 #disqus: username
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /
+baseurl: ''
 
 # Permalinks
-permalink: /:title
+permalink: /:year/:month/:title/
+# permalink: /:title
 # permalink: /author/:username
 # permalink: /tag/:tag
 
