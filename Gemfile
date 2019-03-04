@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.6.3"
+gem "jekyll", "~> 3.7.4"
 #gem "jekyll-archives"
 #gem "rdiscount", "~> 2.1.7"
 #gem "pygments.rb", "~> 0.6.3"
-#gem 'kramdown', '~> 1.8'
+#gem 'kramdown', '~> 1.17'
 #gem 'rouge', '~> 1.10', '>= 1.10.1'
-gem "github-pages", "~> 66"
+gem "github-pages", "~> 197"
 #gem "rake", "~> 10.1.1"
