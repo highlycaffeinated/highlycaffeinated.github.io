@@ -1,0 +1,15 @@
+<p><span class="quotes">&ldquo;</span>{{ post.excerpt | strip_html }}<span class="quotes">&rdquo;</span></p>
+<p class="who">
+  {% if post.link != nil %}
+    <a class="" href="{{ post.link }}">
+  {% endif %}
+  {% if post.who %}
+    --{{ post.who }}
+  {% else }
+    --Unknown
+  {% endif %}
+  {% if post.link != nil %}
+    </a>
+  {% endif %}
+</p>
+{% endif %}
