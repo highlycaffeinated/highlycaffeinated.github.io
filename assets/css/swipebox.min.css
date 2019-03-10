@@ -95,7 +95,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 #swipebox-slider .slide-loading {
-    background: url(../img/loader.gif) center center no-repeat
+    background: url(../images/loader.gif) center center no-repeat
 }
 
 #swipebox-bottom-bar, #swipebox-top-bar {
@@ -133,7 +133,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 #swipebox-close, #swipebox-next, #swipebox-prev {
-    background-image: url(../img/icons.png);
+    background-image: url(../images/icons.png);
     background-repeat: no-repeat;
     border: none !important;
     text-decoration: none !important;
