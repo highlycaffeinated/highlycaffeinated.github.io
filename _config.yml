@@ -42,7 +42,7 @@ permalink: /:year/:month/:title/
 photos:
   base_folder: /assets/photos
 # gems and other configs
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 exclude: [vendor]
 
 #jekyll-archives:
